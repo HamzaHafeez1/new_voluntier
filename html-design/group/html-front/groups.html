@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+   <script src="group_files/inject.js"></script>
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-quiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="csrf-token" content="H7JsUKmv1kjdmXjejsbjX5X0WoatUrDZlA8w0dMW">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="http://192.168.0.159:8000/img/logo/logo.png" type="image/x-icon">
+      <title></title>
+      <!-- Bootstrap core CSS -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <!-- Animation CSS -->
+      <link href="css/animate.css" rel="stylesheet">
+      <link href="css/font-awesome.css" rel="stylesheet">
+      <link href="css/datepicker3.css" rel="stylesheet">
+      <!-- Custom styles for this template -->
+      <link href="css/style.css" rel="stylesheet">
+      <link href="css/jquery.css" rel="stylesheet">
+      <link href="css/footable.css" rel="stylesheet">
+
+      <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
+   </head>
+   <body class="fixed-nav  pace-done" cz-shortcut-listen="true">
+      <div class="pace  pace-inactive">
+         <div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);" data-progress-text="100%" data-progress="99">
+            <div class="pace-progress-inner"></div>
+         </div>
+         <div class="pace-activity"></div>
+      </div>
+      <div class="navbar-wrapper">
+         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="navbar-header page-scroll">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="page-scroll" href="http://192.168.0.159:8000/">
+               <img alt="image" class="top-logo" src="images/mvlogo.png">
+               </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+               <ul class="nav nav-menu">
+                  <li><a class="page-scroll" href="http://192.168.0.159:8000/organization"><i class="fa fa-home"></i>Home</a></li>
+                  <li><a class="page-scroll" href="http://192.168.0.159:8000/organization/profile"><i class="fa fa-user"></i>Profile</a></li>
+                  <li><a class="page-scroll" href="http://192.168.0.159:8000/organization/opportunity"><i class="fa fa-globe"></i>Opportunities</a></li>
+                  <li><a class="page-scroll" href="http://192.168.0.159:8000/organization/track"><i class="fa fa-line-chart"></i>Track</a></li>
+                  <li><a class="page-scroll" href="http://192.168.0.159:8000/organization/friend"><i class="fa fa-user-plus"></i>Friends</a></li>
+                  <li class="active"><a class="page-scroll" href="http://192.168.0.159:8000/organization/group"><i class="fa fa-group"></i>Groups</a></li>
+               </ul>
+               <ul class="nav navbar-top-links navbar-right">
+                  <li class="dropdown">
+                     <a class="dropdown-toggle count-info" data-toggle="dropdown" data-placement="bottom" title="Search User/Org" href="#">
+                     <i class="fa fa-search"></i>
+                     </a>
+                     <ul class="dropdown-menu dropdown-search">
+                        <li>
+                           <div class="text-center link-block">
+                              <div class="search-box">
+                                 <div class="input-group">
+                                    <input id="search_box" class="form-control" placeholder="Search Organization..." type="text"> <span class="input-group-btn">
+                                    <button type="button" id="btn_search" class="btn btn-primary" style="padding: 6px 12px;"><i class="fa fa-search"></i>
+                                    </button></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle count-info" title="Post Opportunity" href="http://192.168.0.159:8000/organization/post_opportunity">
+                     <i class="fa fa-plus"></i>
+                     </a>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle count-info show_show_dlg" href="#" data-toggle="modal" data-target="#share_profile" title="Share Profile">
+                     <i class="fa fa-slideshare"></i>
+                     </a>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle count-info" data-toggle="dropdown" data-placement="bottom" title="Messages Box" href="#">
+                     <i class="fa fa-envelope"></i>  <span class="label label-warning" style="display: none"></span>
+                     </a>
+                     <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                           <div class="text-center link-block"><a href="http://192.168.0.159:8000/organization/mailbox.html"><i class="fa fa-envelope"></i> <strong>Read All Messages</strong> <i class="fa fa-angle-right"></i></a></div>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle count-info" title="Alerts" href="http://192.168.0.159:8000/viewAlert">
+                     <i class="fa fa-bell"></i>  <span class="label label-primary label-alert" style="display: none">8</span>
+                     </a>
+                  </li>
+                  <input id="user_id" value="24" type="hidden">
+                  <li class="dropdown">
+                     <a class="dropdown-toggle count-info" data-toggle="dropdown" data-placement="bottom" title="Account Setting" href="#">
+                     <i class="fa fa-user"></i>
+                     </a>
+                     <ul class="dropdown-menu dropdown-user">
+                        <li>
+                           <div class="dropdown-user-box">
+                              <a href="http://192.168.0.159:8000/organization/profile" class="pull-left">
+                              <img alt="image" class="img-circle" src="images/organization-default-logo.png">
+                              </a>
+                              <div class="user-name">sweetyorga</div>
+                              <div class="user-email">sweetysaha600@gmail.com</div>
+                              <div class="profile-button">
+                                 <a href="http://192.168.0.159:8000/organization/profile" class="btn btn-primary">
+                                 <i class="fa fa-user"></i> My Profile
+                                 </a>
+                                 <a href="http://192.168.0.159:8000/organization/accountSetting" class="btn btn-primary">
+                                 <i class="fa fa-user"></i> My Account
+                                 </a>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                           <div class="text-center link-block">
+                              <a href="http://192.168.0.159:8000/signout_user">
+                              <i class="fa fa-sign-out"></i> <strong>Sign out</strong>
+                              </a>
+                           </div>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+      <div class="content-panel">
+         <div class="wrapper wrapper-content">
+            <div class="row">
+               <div class="col-lg-12 animated fadeInRight impact-panel" style="margin-top: 0">
+
+                  <div class="groupWrapper clearfix">
+                      <!--Vertical Tab-->
+                      <div class="addGroup clearfix"><h2>Add Group <a href="javascript:void(0)"><i class="fa fa-plus-circle"></i></a></h2></div>
+                        <div id="parentVerticalTab">
+                            <ul class="resp-tabs-list hor_1">
+                                <li>Volunteers United</li>
+                                <li>Friends of the Zoo</li>
+                                <li>Food bank helpers</li>
+                                <li>Legal Aid</li>
+                            </ul>
+                            <div class="resp-tabs-container hor_1">
+                                <div>
+                                   <div class="groupBanner">
+                                       <div class="content">
+                                           <h4>Impact</h4>
+                                           12,345
+                                           <p>hours</p>
+                                       </div>
+                                       <img src="images/groupbanner.jpg" alt="">
+                                   </div>
+                                   <div class="vlWrapper">
+                                       <div class="Vl_header clearfix">
+                                       <h2>Volunteers United</h2>
+                                       <button class="btn btn-primary">Leave Group</button>
+                                   </div>
+
+                                   <ul class="nav nav-tabs">
+                                        <li><a data-toggle="tab" href="#members">Members</a></li>
+                                        <li class="active"><a data-toggle="tab" href="#impact">Impact</a></li>                                
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div id="members" class="tab-pane fade">
+                                          <h3>Members</h3>
+                                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                        </div>
+
+
+                                        <div id="impact" class="tab-pane fade active in">
+                                          <h3></h3>
+                                          <div class="row">
+                                            <div class="col-sm-12">
+                                                <a class="print" href="javascript:void(0)"><i class="fa fa-print"></i></a>
+                                            </div>
+                                              <div class="col-sm-6">
+                                                  <div class="borderBox">
+                                                      <h4>12,345 hours</h4>
+                                                      <small>contributed since creation</small>
+                                                  </div>
+                                                  <div class="borderBox">
+                                                  <small>Ranked</small>
+                                                      <h4>2nd</h4>
+                                                      <small>in Georgia</small>
+                                                  </div>
+                                              </div>
+                                              <div class="col-sm-6">
+                                                  <img src="images/chart.png" alt="">
+                                              </div>
+                                          </div>
+
+                                          <h5 class="reconrdTitle">Past Records</h5>
+                                          <ul class="recordList list-unstyled">
+                                              <li>01/15/2018 - Volunteers united is among the top 5 groups in the USA.</li>
+                                              <li>01/15/2018 - Volunteers united is among the top 5 groups in the USA.</li>
+                                              <li>01/15/2018 - Volunteers united is among the top 5 groups in the USA.</li>
+                                              <li>01/15/2018 - Volunteers united is among the top 5 groups in the USA.</li>
+                                              <li>01/15/2018 - Volunteers united is among the top 5 groups in the USA.</li>
+                                              <li>01/15/2018 - Volunteers united is among the top 5 groups in the USA.</li>
+                                          </ul>
+                                        </div>
+                                        
+                                        
+                                      </div>
+
+
+                                   </div>
+                                </div>
+
+                                <div>
+                                    Lorem consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis.
+                                    <br>
+                                    <br>
+                                    <p>Tab 2 Container</p>
+                                </div>
+
+                                <div>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+                                    <br>
+                                    <br>
+                                    <p>Tab 3 Container</p>
+                                </div>
+
+                                <div>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum nibh urna, euismod ut ornare non, volutpat vel tortor. Integer laoreet placerat suscipit. Sed sodales scelerisque commodo. Nam porta cursus lectus. Proin nunc erat, gravida a facilisis quis, ornare id lectus. Proin consectetur nibh quis urna gravida mollis.
+                                    <br>
+                                    <br>
+                                    <p>Tab 4 Container</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer">
+            <div class="pull-right">
+            </div>
+            <div class="copy-right"><strong>MyVoluntier, LLC ©2018.</strong> All Rights Reserved</div>
+         </div>
+      </div>
+      <!-- Mainly scripts -->
+      <script src="js/jquery-2.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/jquery_002.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/chosen.js"></script>
+      <script src="js/cropper.js"></script>
+      <!-- Custom and plugin javascript -->
+      <script src="js/inspinia.js"></script>
+      <script src="js/pace.js"></script>
+      <script src="js/highstock.js"></script>
+      <script src="js/bootstrap-datepicker.js"></script>
+      <script src="js/global.js"></script>
+      <script src="js/check_validate.js"></script>
+      <script src="js/jquery_003.js"></script>
+      <script>
+         $(document).ready(function () {
+             var d = new Date();
+             var n = d.getFullYear();
+             $('.copy-right').html('<strong>MyVoluntier, LLC &copy;'+ n+'.</strong> All Rights Reserved');
+             $('.show_show_dlg').on('click',function () {
+                 $(".spiner-view").hide();
+                 $('.success-first').hide();
+                 $('.login-first').show();
+                 $('#btn_share').show();
+                 $('.tagsinput .tag').remove();
+                 $('#share_emails').val('');
+                 $('#comments').val('');
+             });
+         
+             $(".spiner-view").hide();
+             $('.success-first').hide();
+             $(document).ajaxStart(function () {
+                 $(".spiner-view").show();
+                 $('.login-first').hide();
+             }).ajaxStop(function () {
+                 $(".spiner-view").hide();
+             });
+             
+             getMessages();
+             getAlert();
+         });
+         
+         function getMessages() {
+             var url = API_URL + 'getMessages';
+             var user_id = $('#user_id').val();
+             $.ajaxSetup({
+                 headers: {
+                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                 }
+             });
+             console.log();
+             var type = "post";
+             var formData = {
+                 user_id: user_id,
+             };
+             $.ajax({
+                 type: type,
+                 url: url,
+                 data: formData,
+                 success: function (data) {
+                     if(data.result.length > 0){
+                         $('.label-warning').show();
+                         $('.label-warning').html(data.result.length);
+                         $.each(data.result, function (index,value) {
+                             var logo = SITE_URL+'uploads/'+value.sender_logo;
+                             if(value.sender_logo == null){
+                                 if(value.sender_role == 'volunteer'){
+                                     logo = SITE_URL+'images/member-default-logo.png';
+                                 }else{
+                                     logo = SITE_URL+'images/organization-default-logo.png';
+                                 }
+                             }
+                             var content = value.content;
+                             if(content.length > 25){
+                                 content = content.slice(0,25)+'...';
+                             }
+                             $('.dropdown-messages').append($('<li><div class="dropdown-messages-box"><a href="#" class="pull-left"><img alt="image" class="img-circle" src="'+logo+'"></a><a style="padding: 0"><div class="media-body"><strong>'+value.sender_name+'</strong><br> '+content+' <br><small class="text-muted">'+value.created_at+'</small></div></a></div></li><li class="divider"></li>'));
+                         });
+                         $('.dropdown-messages').append($('<li><div class="text-center link-block"><a href="mailbox.html"><i class="fa fa-envelope"></i> <strong>Read All Messages</strong> <i class="fa fa-angle-right"></i></a></div></li>'));
+                     }
+                     else{
+                         $('.label-warning').hide();
+                         $('.dropdown-messages').append($('<li><div class="text-center link-block"><a href="mailbox.html"><i class="fa fa-envelope"></i> <strong>Read All Messages</strong> <i class="fa fa-angle-right"></i></a></div></li>'));
+                     }
+                 },
+                 error: function (data) {
+                     console.log('Error:', data);
+                 }
+             });
+         }
+         
+         function getAlert(){
+             var url = API_URL + 'getAlert';
+             var user_id = $('#user_id').val();
+             $.ajaxSetup({
+                 headers: {
+                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                 }
+             });
+             console.log();
+             var type = "post";
+             var formData = {
+                 user_id: user_id,
+             };
+             $.ajax({
+                 type: type,
+                 url: url,
+                 data: formData,
+                 success: function (data) {
+                     if(data.result > 0){
+                         $('.label-alert').show();
+                         $('.label-alert').html(data.result);
+                     }
+                     else{
+                         $('.label-alert').hide();
+                     }
+                 },
+                 error: function (data) {
+                     console.log('Error:', data);
+                 }
+             });
+         }
+         
+         function onAddTag(tag) {
+             alert("Added a email addresses: " + tag);
+         }
+         function onRemoveTag(tag) {
+             alert("Removed a tag: " + tag);
+         }
+         
+         function onChangeTag(input,tag) {
+             alert("Changed a tag: " + tag);
+         }
+         
+         $(function() {
+             $('#share_emails').tagsInput({width: 'auto'});
+         });
+         
+         $('#btn_share').on('click',function () {
+             var url = API_URL + 'share_profile';
+             $.ajaxSetup({
+                 headers: {
+                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                 }
+             });
+         
+             console.log();
+             var type = "POST";
+             var formData = {
+                 emails: $("#share_emails").val(),
+                 comments: $('#comments').val(),
+             }
+             $.ajax({
+                 type: type,
+                 url: url,
+                 data: formData,
+                 success: function (data) {
+                     $('.success-first').show();
+                     $('#btn_share').hide();
+                 },
+                 error: function (data) {
+                     $('.login-first').show();
+                     console.log('Error:', data);
+                 }
+             });
+         });
+         
+         $('#btn_search').on('click',function () {
+             var keyword = $('#search_box').val();
+             if(keyword != ''){
+                 var url = SITE_URL + 'organization/search?keyword='+keyword;
+                 window.location.replace(url);
+             }
+         });
+         
+         $('#search_box').keyup(function(e){
+             var keyword = $('#search_box').val();
+             if(e.keyCode == 13)
+             {
+                 if(keyword != ''){
+                     var url = SITE_URL + 'organization/search?keyword='+keyword;
+                     window.location.replace(url);
+                 }
+             }
+         });
+      </script>
+      <script src="js/footable.js"></script>
+      <script>
+         $(document).ready(function() {
+             $('.group-table').footable();
+         });
+      </script>
+      <div class="modal inmodal" id="share_profile" tabindex="-1" role="dialog" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content animated flipInY">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Share Your Profile</h4>
+                  <h3>You can share your profile via email!</h3>
+               </div>
+               <div class="spiner-view" style="padding: 70px 0px; display: none;">
+                  <div class="sk-spinner sk-spinner-wave">
+                     <div class="sk-rect1"></div>
+                     <div class="sk-rect2"></div>
+                     <div class="sk-rect3"></div>
+                     <div class="sk-rect4"></div>
+                     <div class="sk-rect5"></div>
+                  </div>
+               </div>
+               <div class="modal-body login-first" style="display: none;">
+                  <div class="col-md-12 reg-content">
+                     <p><strong>Emails: </strong></p>
+                     <input name="share_emails" id="share_emails" class="form-control" placeholder="Enter Email Addresses to Share Your Profile" autocomplete="off" data-tagsinput-init="true" style="display: none;" type="text">
+                     <div id="share_emails_tagsinput" class="tagsinput" style="width: auto; min-height: 85px; height: 85px;">
+                        <div id="share_emails_addTag"><input id="share_emails_tag" value="Add Email Addresses" data-default="Add Email Addresses" style="color: rgb(102, 102, 102); width: 138px;"></div>
+                        <div class="tags_clear"></div>
+                     </div>
+                     <p class="p_invalid" id="invalid_email_alert" style="display: none">Invalid Email Address</p>
+                  </div>
+                  <div style="clear: both;"></div>
+                  <div class="col-md-12 reg-content">
+                     <p><strong>Comments: </strong></p>
+                     <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="You can enter Comments Here"></textarea>
+                  </div>
+                  <div style="clear: both;"></div>
+               </div>
+               <div class="modal-body success-first" style="display: none;">
+                  <div class="col-md-12 reg-content" style="text-align: center">
+                     <h3>You shared your profile successfully!</h3>
+                  </div>
+                  <div style="clear: both;"></div>
+               </div>
+               <div style="clear: both;"></div>
+               <div class="modal-footer">
+                  <div class="col-md-12">
+                     <button type="button" class="btn btn-primary" data-dismiss="modal" id="btn_close">Close</button>
+                     <button type="submit" id="btn_share" class="btn btn-primary">Share</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <tester style="position: absolute; top: -9999px; left: -9999px; width: auto; font-size: 13px; font-family: helvetica; font-weight: 400; letter-spacing: 0px; white-space: nowrap;" id="share_emails_tag_autosize_tester"></tester>
+      <script id="wappalyzer" src="js/inject_002.js"></script>
+
+      <!--Plug-in Initialisation-->
+      <script src="js/easyResponsiveTabs.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {   
+
+        //Vertical Tab
+
+        $('#parentVerticalTab').easyResponsiveTabs({
+            type: 'vertical', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            closed: 'accordion', // Start closed if in accordion view
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo2');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+</script>
+   </body>
+</html>
